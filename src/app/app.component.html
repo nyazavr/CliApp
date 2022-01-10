@@ -1,0 +1,17 @@
+<ul>
+</ul>
+<ul *ngFor="let f of forms">
+    <li>{{f.value}}</li>
+</ul>
+<nav>
+    <button (click)=checkSelect($event)>Document</button>
+    <button (click)=checkSelect($event)>Editor</button>
+    <button (click)="getBuffer()">get</button>
+    <button (click)="postTranspApp()">post</button>
+</nav>
+<ng-container *ngIf="sel.edit">
+    <app-edit [(buffer1)]="buffer" ></app-edit>
+</ng-container> 
+<ng-container *ngIf="sel.doc">
+    <app-document  [(buffer2)]="buffer" (forms)="forms" (createdDoc)="createDocumentApp()"></app-document>
+</ng-container> 

@@ -1,0 +1,87 @@
+
+  .mat-card-main{
+    background-color: rgb(255, 255, 255);
+  }
+  .mat-tab-group{
+    background-color: rgb(255, 255, 255);
+  }
+
+  .mat-card-header{
+    width:80%;
+    margin-left:10%;
+    margin-right: 10%;
+  }
+  .subtitle-default{
+    font-size:16pt;
+    margin-left:10%;
+    margin-right: 10%;
+  }
+  .input-small{
+    background: rgba( 0,0,0,0.1);
+    border: none;
+    border-bottom: 1px solid rgb(156, 132, 132);
+    font-size:14pt;
+    width: 5vw;
+    outline: none;
+  }
+  .input-long-2{
+    background: rgba( 0,0,0,0.1);
+    border: none;
+    border-bottom: 1px solid rgb(3, 3, 3);
+    font-size:14pt;
+    width: 40vw;
+    outline: none;
+  }
+  .input-midle{
+    background: rgba( 0,0,0,0.1);
+    border: none;
+    border-bottom: 1px solid rgb(3, 3, 3);
+    font-size:14pt;
+    width: 10vw;
+    outline: none;
+  }
+  .input-long-1{
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    border-bottom: 1px solid rgb(3, 3, 3);
+    font-size:14pt;
+    width: 50vw;
+    outline: none;
+  }
+  .input-midle-check{
+    background: rgba( 0,0,0,0.1);
+    border: none;
+    border-bottom: 1px solid rgb(3, 3, 3);
+    font-size:14pt;
+    width: 10vw;
+    outline: none;
+  }
+  .card-li{
+    font-size:14pt;
+    display: inline;
+  }
+  .card{
+    font-size:14pt;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  #gruz{
+    font-size:16pt; 
+  }
+  #pasAc{
+    text-align: right;
+  }
+  #select-1{
+    background: rgba( 0,0,0,0.1);
+    border: none;
+    border-bottom: 1px solid rgb(3, 3, 3);
+    font-size:14pt;
+    width: 10vw;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  .select-midle{
+    width: 10vw;
+
+  }

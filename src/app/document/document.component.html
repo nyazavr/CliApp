@@ -1,0 +1,210 @@
+
+<button (click)="createDoc()">Обновить</button>
+          <br>
+          <b>1.Транспортный цех.</b> За смену поступило: <span>{{_transp['inputval']}}</span> &sum;.  <span>{{_transp['inputsum']}}</span>  ед.
+          <br>
+          За смену отгружено: <span>{{_transp['outputval']}}</span> &sum;.  <span>{{_transp['outputsum']}}</span>  ед.
+          <br>
+          За смену МП: <span>{{_transp['MP']}}</span>
+          <br>
+              груженые на р/д  <span>{{_transp['COK']}}</span>  ед. COK, <span>{{_transp['PPF']}}</span> ед. ППФ.  <span>{{_transp['dros']}}</span>  ед. дросс.
+              <br>
+              Грузы:
+                 <span>{{_transp['str11']}}</span> П/в <span>{{_transp['str12']}}</span> ( <span>{{_transp['str13']}}</span>);   <span>{{_transp['str14']}}</span> П/в <span>{{_transp['str15']}}</span> ( <span>{{_transp['str16']}}</span> );
+                <br>
+                 <span>{{_transp['str21']}}</span> П/в <span>{{_transp['str22']}}</span> ( <span>{{_transp['str23']}}</span>);   <span>{{_transp['str24']}}</span> П/в <span>{{_transp['str25']}}</span> ( <span>{{_transp['str26']}}</span> );
+                <br>
+                 <span>{{_transp['str31']}}</span> П/в <span>{{_transp['str32']}}</span> ( <span>{{_transp['str33']}}</span>);   <span>{{_transp['str34']}}</span> П/в <span>{{_transp['str35']}}</span> ( <span>{{_transp['str36']}}</span> );
+                <br>
+                 <span>{{_transp['str41']}}</span> П/в <span>{{_transp['str42']}}</span> ( <span>{{_transp['str43']}}</span>);   <span>{{_transp['str44']}}</span> П/в <span>{{_transp['str45']}}</span> ( <span>{{_transp['str46']}}</span> ); <span class="pasAc">&sum;. {{_transp['sum']}}  ед.</span>
+          <br>
+          <em>Всего подвижного состава:</em> <span>{{_transp['podvSostEd']}}</span>  ед.( <span>{{_transp['podvSostv']}}</span>  в, <span>{{_transp['podvSostPv']}}</span>  п/в,  <span>{{_transp['podvSostCe']}}</span>  ц,  <span>{{_transp['podvSostPl']}}</span>  пл.).
+          <br>
+          Под Zn вагонов: <span>{{_transp['podZn']}}</span>  + груженые: <span>{{_transp['podZn1']}}</span>
+          <br>
+          Под погрузку п/в: <span>{{_transp['podPogr']}}</span>  + груженые: <span>{{_transp['podPogr1']}}</span>
+          <br>
+          Под H<sub>2</sub>SO<sub>4</sub>: <span>{{_transp['podH2SO4']}}</span>  ц+ <span>{{_transp['podH2SO41']}}</span>> пл.т/к + налив: <span>{{_transp['podH2SO42']}}</span>  ц+ <span>{{_transp['podH2SO43']}}</span>пл т/к + налитые: <span>{{_transp['podH2SO44']}}</span>ц.(II сорт).
+          <br>
+          Подход: <span>{{_transp['podhod']}}</span>> ед. на ст."Электростанция (в т.ч. <span>{{_transp['podhod1']}}</span>> ц +  <span>{{_transp['podhod2']}}</span>> пл. т/к)". &sum; <span>{{_transp['podhodsum']}}</span>> ед.
+          <br>
+          Примечания мастера: <span>{{_transp['noteMaster']}}</span>
+          <br>
+          Примечания диспетчера: <span>{{_transp['noteAdmin']}}</span>
+          <br>
+          <b>Цех КЭЦ. Электролиз:</b>  нагрузка: с 19<sup>00</sup>- <span>{{_KEC['str11']}}</span>( <span>{{_KEC['str12']}}</span>- <span>{{_KEC['str13']}}</span>)кА; с  <span>{{_KEC['str14']}}</span>- <span>{{_KEC['str15']}}</span>( <span>{{_KEC['str16']}}</span>- <span>{{_KEC['str17']}}</span>)кА.
+          <br>
+          (t<sup>о/э</sup><sub>крит</sub> 39,0<sup>o</sup>C; t<sub>возд.</sub><sup>proscon</sup>  <span>{{_KEC['oc1']}}</span>- <span>{{_KEC['oc2']}}</span> <sup>o</sup>C).
+          <br>
+          t<sup>o</sup>C<sup>о/э</sup><sub>факт</sub> (max) на выходные по рядам A/B/C/D: <span>{{_KEC['ABCD31']}}</span>/ <span>{{_KEC['ABCD32']}}</span>/ <span>{{_KEC['ABCD33']}}</span>/ <span>{{_KEC['ABCD34']}}</span> <sup>o</sup>C// <span>{{_KEC['ABCD35']}}</span>/ <span>{{_KEC['ABCD36']}}</span>/ <span>{{_KEC['ABCD37']}}</span>/ <span>{{_KEC['ABCD38']}}</span> <sup>o</sup>C;
+          <br>
+          о/э (min-max) Zn (H<sub>2</sub>SO<sub>4</sub>): 
+          <br>
+          I серия: <span>{{_KEC['Iser41']}}</span> &divide;  <span>{{_KEC['Iser42']}}</span> Г/Л ( <span>{{_KEC['Iser43']}}</span> &divide;  <span>{{_KEC['Iser44']}}</span> Г/Л)// <span>{{_KEC['Iser45']}}</span> &divide;  <span>{{_KEC['Iser46']}}</span> Г/Л ( <span>{{_KEC['Iser47']}}</span> &divide;  <span>{{_KEC['Iser48']}}</span> Г/Л);
+          <br>
+          II серия: <span>{{_KEC['IIser51']}}</span> &divide;  <span>{{_KEC['IIser52']}}</span> Г/Л ( <span>{{_KEC['IIser53']}}</span> &divide;  <span>{{_KEC['IIser54']}}</span> Г/Л)// <span>{{_KEC['IIser55']}}</span> &divide;  <span>{{_KEC['IIser56']}}</span> Г/Л ( <span>{{_KEC['IIser57']}}</span> &divide;  <span>{{_KEC['IIser58']}}</span> Г/Л).
+          <br>
+          По циркуляции <span>{{_KEC['str61']}}</span>, по качеству Zn<sup>кат</sup> <span>{{_KEC['str62']}}</span>("Sb"~ <span>{{_KEC['str63']}}</span> мл/подъём; катодов на
+          растворение за сдирку  <span>{{_KEC['str71']}}</span>).Атмосфера  <span>{{_KEC['str72']}}</span>.Ванны  <span>{{_KEC['str73']}}</span>.
+
+        <!--continue-->
+
+          Анодный кран  <span>{{_KEC['str81']}}</span>, машина  <span>{{_KEC['str82']}}</span>. Почистил: Ванны  <span>{{_KEC['str83']}}</span>
+          / <span>{{_KEC['str91']}}</span>; анодов  <span>{{_KEC['str92']}}</span>/ <span>{{_KEC['str93']}}</span> на машине. Mn шлама  <span>{{_KEC['str94']}}</span>/ <span>{{_KEC['str95']}}</span> м<sup>3</sup>.
+          <br>
+          "К/з":обнаружено  <span>{{_KEC['KZ1']}}</span>; устранено  <span>{{_KEC['KZ2']}}</span>; осталось  <span>{{_KEC['KZ3']}}</span>.
+          <br>
+          Примечания мастера: <span>{{_KEC['masterNode1']}}</span>
+          <br>
+          Примечания диспетчера: <span>{{_KEC['aminNode1']}}</span>
+          <br>
+          <b>Плавильное отд.: наплавлено</b> см.№3 (сутки): <span>{{_KEC['plavStr11']}}</span>( <span>{{_KEC['plavStr12']}}</span>)т.;см.№1: <span>{{_KEC['plavStr13']}}</span>т.
+          <br>
+          F801-; F802-;F803-;F805-.
+          <br>
+          распылительная: <span>{{_KEC['plavStr21']}}</span>>.
+          <br>
+          Примечания мастера: <span>{{_KEC['masterNote2']}}</span>
+          <br>
+          Примечания диспетчера: <span>{{_KEC['aminNote2']}}</span>
+          <br>
+          <b>ГМО:</b> поток  <span>{{_KEC['GMO11']}}</span> м<sup>3</sup>/ч. По качеству BCC-6  <span>{{_KEC['GMO12']}}</span>. Фильтрация на I/II стадии  <span>{{_KEC['GMO13']}}</span>/ <span>{{_KEC['GMO14']}}</span> ф/п.
+          По качеству очистки  <span>{{_KEC['GMO21']}}</span>. В работе: <span>{{_KEC['GMO22']}}</span>. TK702C/D  <span>{{_KEC['GMO23']}}</span>. Реактора в
+          работе: ТК501 <span>{{_KEC['GMO31']}}</span>, ТК502 <span>{{_KEC['GMO32']}}</span>/ <span>{{_KEC['GMO33']}}</span>/ <span>{{_KEC['GMO34']}}</span>/ <span>{{_KEC['GMO35']}}</span>( <span>{{_KEC['GMO36']}}</span>). В работе Е501 <span>{{_KEC['GMO37']}}</span>. Гипс  <span>{{_KEC['GMO38']}}</span> м<sup>3</sup>. Б/м  <span>{{_KEC['GMO39']}}</span>.
+          <br>
+          <b>Cd отделение:</b>нагрузка 9,6 ( <span>{{_KEC['CD1']}}</span>- <span>{{_KEC['CD2']}}</span>- <span>{{_KEC['CD3']}}</span>) кА,  <span>{{_KEC['CD4']}}</span>.
+          <br>
+          Примечания мастера: <span>{{_KEC['masterNote3']}}</span>
+          <br>
+          Примечания диспетчера: <span>{{_KEC['adminNote3']}}</span>
+
+          
+
+
+
+          <b>3.Обжиговый цех. Загружено:</b> см. №3(сут): <span>{{_obzhig['str11']}}</span>( <span>{{_obzhig['str12']}}</span>т.); см. №1: <span>{{_obzhig['str13']}}</span> т.
+          <br>
+          В работе печи КС- <span>{{_obzhig['str21']}}</span> (через  <span>{{_obzhig['str22']}}</span>; КС- <span>{{_obzhig['str23']}}</span> на своем О<sub>2</sub>), КС- <span>{{_obzhig['str24']}}</span> на О<sub>2</sub> "Мечел").
+          Печи управляются  <span>{{_obzhig['str31']}}</span>, режимы  <span>{{_obzhig['str32']}}</span>. Сделали по две донные выгрузки,  огарок
+          нормальный. Шихта: <span>{{_obzhig['str41']}}</span> %  <span>{{_obzhig['str42']}}</span>, :  <span>{{_obzhig['str43']}}</span> %  <span>{{_obzhig['str44']}}</span>, : <span>{{_obzhig['str45']}}</span> %  <span>{{_obzhig['str46']}}</span>, :  <span>{{_obzhig['str47']}}</span>% <span>{{_obzhig['str48']}}</span>, :  <span>{{_obzhig['str49']}}</span>%
+           <span>{{_obzhig['str51']}}</span>,  <span>{{_obzhig['str52']}}</span>%  <span>{{_obzhig['str53']}}</span>, + <span>{{_obzhig['str54']}}</span>. На газоочистке в работе секции № <span>{{_obzhig['str55']}}</span>. Разрежение в 
+          "чистом" коллекторе  <span>{{_obzhig['str61']}}</span> &divide;  <span>{{_obzhig['str62']}}</span> мм. Насосы исправны, циркуляция в норме (песков  <span>{{_obzhig['str63']}}</span>, пены  <span>{{_obzhig['str71']}}</span>/песков  <span>{{_obzhig['str72']}}</span>, пены  <span>{{_obzhig['str73']}}</span>). 
+          По складу  <span>{{_obzhig['str74']}}</span> ( <span>{{_obzhig['str75']}}</span> крановщика). Выгрузка: (см №3):
+           <span>{{_obzhig['str81']}}</span>; (см №1): <span>{{_obzhig['str82']}}</span>. 
+          <br>
+          Примечания мастера:<span>{{_obzhig['masterNote']}}</span>
+          <br>
+          Примечания диспетчера:<span>{{_obzhig['aminNote']}}</span>
+          
+
+
+
+          <b>4.Выщелачивательный цех.</b> В работе  <span>{{_sheloch['str11']}}</span> нейтральных и  <span>{{_sheloch['str12']}}</span> кислых сгустителя. 
+          <br>
+          Реактора №  <span>{{_sheloch['str21']}}</span>с CuCl пульпой ( <span>{{_sheloch['str22']}}</span> м<sup>3</sup>). Пример HP из ГМЦ  <span>{{_sheloch['str23']}}</span>. На
+          классификации в работе  <span>{{_sheloch['str31']}}</span> нитка (песков  <span>{{_sheloch['str32']}}</span> см, с классификатора  <span>{{_sheloch['str33']}}</span> т., пенообразование  <span>{{_sheloch['str41']}}</span>).
+          Распылительная:  <span>{{_sheloch['str42']}}</span>. НЧ: <span>{{_sheloch['str43']}}</span>.
+          <br>
+          <em>"CuCl"</em>: установка №1  <span>{{_sheloch['str51']}}</span>, №2  <span>{{_sheloch['str52']}}</span>, операции  <span>{{_sheloch['str53']}}</span>+ <span>{{_sheloch['str54']}}</span> на р-рах ГМЦ (б/м  <span>{{_sheloch['str55']}}</span>).
+          <br>
+          <em>"Флотация"</em>: в работе: поток  <span>{{_sheloch['str61']}}</span> м<sup>3</sup>/ч, НСС- <span>{{_sheloch['str62']}}</span> в  <span>{{_sheloch['str63']}}</span>.
+          <br>
+          <em>ОВВ</em>: провели циклов  <span>{{_sheloch['str71']}}</span>+ <span>{{_sheloch['str72']}}</span>; ВВ приняли  <span>{{_sheloch['str73']}}</span>т.
+          <br>
+          <em>"Карбонизация"</em>: ф/п № <span>{{_sheloch['str81']}}</span> в работе. Циклов  <span>{{_sheloch['str82']}}</span>+ <span>{{_sheloch['str83']}}</span>&rArr; <span>{{_sheloch['str84']}}</span> т. (~ <span>{{_sheloch['str85']}}</span>/ <span>{{_sheloch['str86']}}</span> т/ц).
+          <br>
+          <em>Дозировка Fe окалины</em>: <span>{{_sheloch['str91']}}</span>. <em>Ввод воды</em>: <span>{{_sheloch['str92']}}</span>.
+          <br>
+          Примечания мастера: <span>{{_sheloch['masterNote']}}</span>
+          <br>
+          Примечания диспетчера: <span>{{_sheloch['adminNote']}}<span>
+            
+      
+
+
+          <b>5.Вельц-цех. Переработано /в т.ч. кек/в т.ч. ВЦС(вмт): <span>{{_velcCeh['str11']}}</span>/ <span>{{_velcCeh['str12']}}</span>/ <span>{{_velcCeh['str13']}}</span>.</b>
+          <br>
+          В/п №3(max произв. 60 вмт): Переработано: <span>{{_velcCeh['str21']}}</span> т.(~ <span>{{_velcCeh['str22']}}</span>т/ч/ <span>{{_velcCeh['str23']}}</span>/)
+          <br>
+          В/п №4(max произв. 67 вмт): Переработано: <span>{{_velcCeh['str31']}}</span> т.(~ <span>{{_velcCeh['str32']}}</span>т/ч/ <span>{{_velcCeh['str33']}}</span>/)
+          <br>
+          В/п 3/4: <span>{{_velcCeh['str41']}}</span> т кек,  <span>{{_velcCeh['str42']}}</span> т промпродукты,  <span>{{_velcCeh['str43']}}</span> тК/окись,  <span>{{_velcCeh['str44']}}</span> т изгарь,  <span>{{_velcCeh['str45']}}</span> т долмит + 16% нефтекокс (окиси  <span>{{_velcCeh['str46']}}</span> т).
+          <b><em>РФГ</em></b>: текущую в/о  <span>{{_velcCeh['str51']}}</span>, в/о сКВП №5,6  <span>{{_velcCeh['str52']}}</span>. <b><em>ПСО</em></b>:"В"~ <span>{{_velcCeh['str53']}}</span> м;"З"~ <span>{{_velcCeh['str54']}}</span> м. Подали  <span>{{_velcCeh['str55']}}</span> МКР
+          с текущими подкулерными возгонами в ВыщЦ(остаток  <span>{{_velcCeh['str61']}}</span> МКР).
+          <br>
+          <b><em>Прокалка №1</em></b>(max произв. 81 вмт): переработано: <span>{{_velcCeh['str71']}}</span>т.(~ <span>{{_velcCeh['str72']}}</span>т/ч, <span>{{_velcCeh['str73']}}</span>), в ГМЦ откачали  <span>{{_velcCeh['str74']}}</span> т.
+          <br>
+          <b><em>Прокалка №2</em></b>(max произв. 81 вмт): переработано: <span>{{_velcCeh['str81']}}</span>т.(~ <span>{{_velcCeh['str82']}}</span>т/ч, <span>{{_velcCeh['str83']}}</span>), в ГМЦ откачали  <span>{{_velcCeh['str84']}}</span> т.
+          <br>
+          Переработали окиси Проминдустрия/ПСЦМ/ <span>{{_velcCeh['str91']}}</span>: <span>{{_velcCeh['str92']}}</span>/ <span>{{_velcCeh['str93']}}</span>/ <span>{{_velcCeh['str94']}}</span> т.; с н.м. <span>{{_velcCeh['str95']}}</span>/ <span>{{_velcCeh['str96']}}</span>/ <span>{{_velcCeh['str97']}}</span>т.
+          <br>
+          <b>УПРиГР</b>: прошихтовали  <span>{{_velcCeh['str101']}}</span> т. ( <span>{{_velcCeh['str101']}}</span> цикла), по заданию. 
+          <br>
+          <em><b>"Larox"</b></em>: в работе  <span>{{_velcCeh['str111']}}</span> п/ф, циклов  <span>{{_velcCeh['str112']}}</span>( <span>{{_velcCeh['str113']}}</span>+ <span>{{_velcCeh['str114']}}</span>)&rArr; <span>{{_velcCeh['str115']}}</span>т. (план - не менее 4,0 т/ц /факт ~ <span>{{_velcCeh['str116']}}</span>т/ц).
+          <br>
+          Простой: <span>{{_velcCeh['prostoy']}}</span>>
+          <br>
+          Примечания мастера: <span>{{_velcCeh['masterNote']}}</span>
+          <br>
+          Примечания диспетчера: <span>{{_velcCeh['adminNote']}}<span>
+          <br>
+          <b><em>КВП-5/6:</em></b> (УР  <span>{{_velcCeh['str121']}}</span>, БГ  <span>{{_velcCeh['str122']}}</span>): прошихтовали:  <span>{{_velcCeh['str123']}}</span> т. кека, в т.ч.  <span>{{_velcCeh['str124']}}</span> т. из запаса;  <span>{{_velcCeh['str125']}}</span> т. К/окиси
+          ( <span>{{_velcCeh['str131']}}</span>/ <span>{{_velcCeh['str132']}}</span>), <span>{{_velcCeh['str133']}}</span> т. Святогор ( <span>{{_velcCeh['str134']}}</span>/ <span>{{_velcCeh['str135']}}</span>),  <span>{{_velcCeh['str136']}}</span> т. изгарь ( <span>{{_velcCeh['str137']}}</span>/ <span>{{_velcCeh['str138']}}</span>),  <span>{{_velcCeh['str139']}}</span> т.  <span>{{_velcCeh['str1310']}}</span>( <span>{{_velcCeh['str1311']}}</span>/ <span>{{_velcCeh['str1312']}}</span>),  <span>{{_velcCeh['str1313']}}</span>т. доломит ( <span>{{_velcCeh['str1314']}}</span>/ <span>{{_velcCeh['str1315']}}</span>).
+          <br>
+          <b><em>КВП-5:</em></b> (план  <span>{{_velcCeh['str141']}}</span>): переработано  <span>{{_velcCeh['str142']}}</span> т. (~ <span>{{_velcCeh['str143']}}</span> т/ч по шихте,  <span>{{_velcCeh['str144']}}</span>). Получено окиси  <span>{{_velcCeh['str145']}}</span>т.
+          Примечания: <span>{{_velcCeh['str151']}}</span>>. Оборот с бункеров  <span>{{_velcCeh['str152']}}</span>(окатали <span>{{_velcCeh['str153']}}</span>т.)
+          <br>
+          <b><em>КВП-6:</em></b> (план  <span>{{_velcCeh['str161']}}</span>): переработано  <span>{{_velcCeh['str162']}}</span> т. (~ <span>{{_velcCeh['str163']}}</span> т/ч по шихте, / <span>{{_velcCeh['str164']}}</span>/, материал <span>{{_velcCeh['str171']}}</span>). Получено окиси  <span>{{_velcCeh['str172']}}</span> т. Примечания: <span>{{_velcCeh['str173']}}</span>.
+          Оборот с бункеров  <span>{{_velcCeh['str181']}}</span>&divide; <span>{{_velcCeh['str182']}}</span> на Eirich(окатали  <span>{{_velcCeh['str183']}}</span> т.). КВП-6(Eirich): циклов  <span>{{_velcCeh['str184']}}</span>( <span>{{_velcCeh['str185']}}</span>+ <span>{{_velcCeh['str186']}}</span>)&rArr; <span>{{_velcCeh['str187']}}</span>т. (в 
+          т.ч. Zn-содержащего сырья  <span>{{_velcCeh['str191']}}</span> т. W= <span>{{_velcCeh['str192']}}</span>%). Окатали  <span>{{_velcCeh['str193']}}</span>%-переработка шихты из СШ.
+          Клинкера к отгрузке (смт): в/ц~ <span>{{_velcCeh['str201']}}</span> п/в (~ <span>{{_velcCeh['str202']}}</span>); КВП-5/6:~ <span>{{_velcCeh['str203']}}</span> п/в(~ <span>{{_velcCeh['str204']}}</span>).
+          <br>
+          Примечания мастера: <span>{{_velcCeh['masterNote1']}}<span>
+          <br>
+          Примечания диспетчера: <span>{{_velcCeh['adminNote1']}}</span>
+       
+
+
+          <b>6.ГМЦ.Загрузили: <span>{{_gmc['str11']}}</span> м<sup>3</sup>; откачали:  <span>{{_gmc['str12']}}</span> м<sup>3</sup></b>.( <span>{{_gmc['str13']}}</span>).
+          <br>
+          Принято непрок. в/о  <span>{{_gmc['str21']}}</span> т.<b><em>СПО:</em></b> прогнали  <span>{{_gmc['str22']}}</span> т., остаток  <span>{{_gmc['str23']}}</span> т.; песков  <span>{{_gmc['str24']}}</span> т.
+          <br>
+          Установки  <span>{{_gmc['str31']}}</span>(б/м <span>{{_gmc['str32']}}</span>). PbAg дросс, кг: <span>{{_gmc['str33']}}</span>; с н.м.  <span>{{_gmc['str34']}}</span>.
+          <br>
+          В работе КС- <span>{{_gmc['str41']}}</span>( <span>{{_gmc['str42']}}</span>) и  <span>{{_gmc['str43']}}</span> Mn мельницы ( <span>{{_gmc['str44']}}</span>). <b><em>РМО:</em></b> поток  <span>{{_gmc['str45']}}</span>м<sup>3</sup>/ч. H<sub>2</sub>SO<sub>4</sub>~ <span>{{_gmc['str46']}}</span>т.
+          <br>
+          <b><em>"Larox"</em></b> ( <span>{{_gmc['str51']}}</span>): циклов  <span>{{_gmc['str52']}}</span>&rArr; <span>{{_gmc['str53']}}</span>т.(~ <span>{{_gmc['str54']}}</span>т/ц).<b><em>"FB-1200"</em></b>( <span>{{_gmc['str55']}}</span>): циклов  <span>{{_gmc['str56']}}</span> &rArr;  <span>{{_gmc['str57']}}</span>т. (~ <span>{{_gmc['str58']}}</span>т/ц).
+          <br>
+          <b><em>"MC-100" №1</em></b>  циклов  <span>{{_gmc['str61']}}</span>&rArr; <span>{{_gmc['str62']}}</span>т.(~ <span>{{_gmc['str63']}}</span>т/ц).<b><em>"MC-100"</em></b> №2 циклов  <span>{{_gmc['str64']}}</span> &rArr;  <span>{{_gmc['str65']}}</span> т.(~ <span>{{_gmc['str66']}}</span>т/ц).
+          <br>
+          <b><em>"Diefenbach": №14.1</em></b>  ( <span>{{_gmc['str71']}}</span>): <span>{{_gmc['str72']}}</span>&rArr <span>{{_gmc['str73']}}</span>т. (~ <span>{{_gmc['str74']}}</span>т/ц); <b>№14.2</b>( <span>{{_gmc['str75']}}</span>): <span>{{_gmc['str76']}}</span>&rArr; <span>{{_gmc['str77']}}</span>т.(~ <span>{{_gmc['str78']}}</span> т/ц).
+          <br>
+          Примечания мастера: <span>{{_gmc['masterNote']}}</span>
+          <br>
+          Примечания диспетчера: <span>{{_gmc['aminNote']}}</span>
+        
+
+
+
+          <b>7.СКЦ.Получено кислоты: <span>{{_skc['str1']}}</span>т.</b>
+          <br>
+          Газовая нагрузка  <span>{{_skc['str11']}}</span>( <span>{{_skc['str12']}}</span>- <span>{{_skc['str13']}}</span>- <span>{{_skc['str14']}}</span>) <b>тыс. м<sup>3</sup>/ч</b>. Газ: <span>{{_skc['str15']}}</span>- <span>{{_skc['str16']}}</span>- <span>{{_skc['str17']}}</span>%. К/а работают в режимах.
+          <br>
+          Свободный объем  <span>{{_skc['str21']}}</span> т.(под II сорт  <span>{{_skc['str22']}}</span>).
+          <br>
+          Примечания мастера: <span>{{_skc['masterNote']}}</span>
+          <br>
+          Примечания диспетчера: <span>{{_skc['aminNote']}}</span>
+          <br>
+          УОС в норме.
+          <br>
+          ЭНЦ: ВКУ: в работе  <span>{{_skc['str31']}}</span> аппаратов(конд.~ <span>{{_skc['str32']}}</span> м<sup>3</sup>/ч); Котельная: в работе котел № <span>{{_skc['str33']}}</span>( <span>{{_skc['str34']}}</span> м<sup>3</sup>/ч).
+          <br>
+          КС: в работе блоки № <span>{{_skc['str41']}}</span>( <span>{{_skc['str42']}}</span>/ <span>{{_skc['str43']}}</span>/ <span>{{_skc['str44']}}</span>%: <span>{{_skc['str45']}}</span>/ <span>{{_skc['str46']}}</span>/ <span>{{_skc['str47']}}</span> нм<sup>3</sup>/ч), <span>{{_skc['str48']}}</span>.
+          <br>
+          Объем растворов по заводу: <span>{{_skc['str51']}}</span> м<sup>3</sup>( <span>{{_skc['str52']}}</span>).
+          <br>
+          НМУ-1 <span>{{_skc['str6']}}</span>
+          <br>
+          <p class="pasAc"><span >Смену сдал: {{_skc['in']}} Смену принял: {{_skc['out']}}</span></p>
+

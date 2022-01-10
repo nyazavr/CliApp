@@ -1,0 +1,253 @@
+<button (click)="save()">сохранить</button>  
+<mat-tab-group class="mat-tab-group" [selectedIndex]="selected.value"
+(selectedIndexChange)="selected.setValue($event)">
+    <mat-tab  label="Транспортный цех" >
+      <mat-card id="Transport" class="mat-card-main">
+        <mat-card-content class="card">
+          За смену поступило: 
+            <input id="inp1"  class="input-long-2" [(ngModel)]="_transp[181]" type="text">
+            &sum;. <input id="inp2" [(ngModel)]="_transp[182]"  class="input-midle" type="text"> ед.
+          <br>
+          За смену отгружено: 
+            <input  class="input-long-2" [(ngModel)]="183]" type="text" >
+            &sum;. <input class="input-midle" [(ngModel)]="_transp[184]" type="text" > ед.
+          <br>
+          За смену МП: 
+            <input  class="input-long-1" [(ngModel)]="_transp[185]" type="text" >
+          <br>
+          <mat-card class="mat-card-main">
+            <mat-card-header>
+              груженые на р/д <input class="input-midle" [(ngModel)]="_transp[186]"  type="text" > ед. COK,<input class="input-midle" type="text" [(ngModel)]="_transp[187]"  > ед. ППФ, <input class="input-midle" [(ngModel)]="_transp[188]" type="text" > ед. дросс.
+            </mat-card-header>
+          <mat-card-subtitle id="gruz" >Грузы:</mat-card-subtitle>
+          <mat-card-content class="cargo">
+            <mat-card-content class="card-li">
+              <input class="input-midle" type="text" [(ngModel)]="_transp[189]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[180]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[181]"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp[182]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[1813]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[21]"  >);
+              <br>
+              <input class="input-midle" type="text" [(ngModel)]="_transp[22]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[186]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[187]"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp[188]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[189]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[190]"  >)
+              <br>
+              <input class="input-midle" type="text" [(ngModel)]="_transp[191]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[192]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[193]"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp[194]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[195]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[196]"  >);
+              <br>
+              <input class="input-midle" type="text" [(ngModel)]="_transp[197]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[198]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[199]"  >);  <input class="input-midle" type="text" [(ngModel)]="200]"  >П/в<input class="input-midle" type="text" [(ngModel)]="201]"  >(<input class="input-midle" type="text" [(ngModel)]="202]"  >);
+            </mat-card-content>
+            <mat-card-content >
+              <p id="pasAc">&sum;.<input class="input-midle" type="text" [(ngModel)]="203]"  > ед.</p>
+            </mat-card-content>
+          </mat-card-content>
+          </mat-card>
+          <br>
+          <em>Всего подвижного состава:</em><input class="input-midle" [(ngModel)]="204]" type="text" > ед.(<input class="input-midle" [(ngModel)]="205]" type="text" > в,<input class="input-midle" type="text" [(ngModel)]="206]"  > п/в, <input class="input-midle" [(ngModel)]="207]" type="text" > ц, <input class="input-midle" [(ngModel)]="208]" type="text" > пл.).
+          <br>
+          Под Zn вагонов:<input class="input-midle" [(ngModel)]="209]" type="text" > + груженые:<input  class="input-long-2" [(ngModel)]="_transp[210]" type="text" >
+          <br>
+          Под погрузку п/в:<input class="input-midle" [(ngModel)]="_transp[211]" type="text" > + груженые:<input  class="input-long-2" [(ngModel)]="_transp[212]" type="text" >
+          <br>
+          Под H<sub>2</sub>SO<sub>4</sub>:<input class="input-midle" [(ngModel)]="_transp[213]" type="text" > ц+<input class="input-midle" [(ngModel)]="_transp[214]" type="text"> пл.т/к + налив:<input class="input-midle" [(ngModel)]="_transp[215]" type="text" > ц+ <input class="input-midle" type="text" [(ngModel)]="_transp[216]">пл т/к + налитые:<input class="input-midle" type="text" [(ngModel)]="_transp[217]">ц.(II сорт).
+          <br>
+          Подход:<input class="input-midle" [(ngModel)]="_transp[218]" type="text"> ед. на ст."Электростанция (в т.ч.<input class="input-midle" [(ngModel)]="_transp[219]" type="text"> ц + <input class="input-midle" [(ngModel)]="_transp[220]" type="text"> пл. т/к)". Сумм.<input class="input-midle" [(ngModel)]="_transp[221]" type="text"> ед.
+          <br>
+          Примечания мастера:<input  class="input-long-1" [(ngModel)]="_transp[222]" type="text" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" [(ngModel)]="_transp[223]" type="text" >
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+    <mat-tab  label="Цех КЭЦ." >
+      <mat-card id="KEC" class="mat-card-main">
+        <mat-card-subtitle class="subtitle-default">Электролиз:</mat-card-subtitle>
+        <mat-card-content class="card">
+          нагрузка: с 19<sup>00</sup>-<input class="input-small" type="text" [(ngModel)]="_KEC['str11']">(<input class="input-small" type="text" [(ngModel)]="_KEC['str12']">-<input class="input-small" type="text" [(ngModel)]="_KEC['str13']">)кА; с <input class="input-small" type="text" [(ngModel)]="_KEC['str14']">-<input class="input-small" type="text" [(ngModel)]="_KEC['str15']">(<input class="input-small" type="text" [(ngModel)]="_KEC['str16']">-<input class="input-small" type="text" [(ngModel)]="_KEC['str17']">)кА.
+          <br>
+          (t<sup>о/э</sup><sub>крит</sub> 39,0<sup>o</sup>C; t<sub>возд.</sub><sup>proscon</sup> <input class="input-small" type="text" [(ngModel)]="_KEC['oc1']">-<input class="input-small" type="text" [(ngModel)]="_KEC['oc2']"> <sup>o</sup>C).
+          <br>
+          t<sup>o</sup>C<sup>о/э</sup><sub>факт</sub> (max) на выходные по рядам A/B/C/D:<input class="input-small" type="text" [(ngModel)]="_KEC['ABCD31']">/<input class="input-small" type="text" [(ngModel)]="_KEC['ABCD32']">/<input class="input-small" type="text" [(ngModel)]="_KEC['ABCD33']">/<input class="input-small" type="text" [(ngModel)]="_KEC['ABCD34']"> <sup>o</sup>C//<input class="input-small" type="text" [(ngModel)]="_KEC['ABCD35']">/<input class="input-small" type="text" [(ngModel)]="_KEC['ABCD36']">/<input class="input-small" type="text" [(ngModel)]="_KEC['ABCD37']">/<input class="input-small" type="text" [(ngModel)]="_KEC['ABCD38']"> <sup>o</sup>C;
+          <br>
+          о/э (min-max) Zn (H<sub>2</sub>SO<sub>4</sub>): 
+          <br>
+          I серия:<input class="input-small" type="text" [(ngModel)]="_KEC['Iser41']"> &divide; <input class="input-small" type="text" [(ngModel)]="_KEC['Iser42']"> Г/Л (<input class="input-small" type="text" [(ngModel)]="_KEC['Iser43']"> &divide; <input class="input-small" type="text" [(ngModel)]="_KEC['Iser44']"> Г/Л)//<input class="input-small" type="text" [(ngModel)]="_KEC['Iser45']"> &divide; <input class="input-small" type="text" [(ngModel)]="_KEC['Iser46']"> Г/Л (<input class="input-small" type="text" [(ngModel)]="_KEC['Iser47']"> &divide; <input class="input-small" type="text" [(ngModel)]="_KEC['Iser48']"> Г/Л);
+          <br>
+          II серия:<input class="input-small" type="text" [(ngModel)]="_KEC['IIser51']"> &divide; <input class="input-small" type="text" [(ngModel)]="_KEC['IIser52']"> Г/Л (<input class="input-small" type="text" [(ngModel)]="_KEC['IIser53']"> &divide; <input class="input-small" type="text" [(ngModel)]="_KEC['IIser54']"> Г/Л)//<input class="input-small" type="text" [(ngModel)]="_KEC['IIser55']"> &divide; <input class="input-small" type="text" [(ngModel)]="_KEC['IIser56']"> Г/Л (<input class="input-small" type="text" [(ngModel)]="_KEC['IIser57']"> &divide; <input class="input-small" type="text" [(ngModel)]="_KEC['IIser58']"> Г/Л).
+          <br>
+          По циркуляции<input class="input-midle" type="text" [(ngModel)]="_KEC['str61']">, по качеству Zn<sup>кат</sup><input class="input-midle" type="text" [(ngModel)]="_KEC['str62']">("Sb"~<input class="input-midle" type="text" [(ngModel)]="_KEC['str63']"> мл/подъём; катодов на
+          растворение за сдирку <input class="input-midle" type="text" [(ngModel)]="_KEC['str71']">).Атмосфера <input class="input-midle" type="text" [(ngModel)]="_KEC['str72']">.Ванны <input class="input-midle" type="text" [(ngModel)]="_KEC['str73']">.
+
+        <!--continue-->
+
+          Анодный кран <input class="input-midle" type="text" [(ngModel)]="_KEC['str81']">, машина <input class="input-midle" type="text" [(ngModel)]="_KEC['str82']">. Почистил: Ванны <input class="input-midle" type="text" [(ngModel)]="_KEC['str83']">
+          /<input class="input-midle" type="text" [(ngModel)]="_KEC['str91']">; анодов <input class="input-midle" type="text" [(ngModel)]="_KEC['str92']">/<input class="input-midle" type="text" [(ngModel)]="_KEC['str93']"> на машине. Mn шлама <input class="input-midle" type="text" [(ngModel)]="_KEC['str94']">/<input class="input-midle" type="text" [(ngModel)]="_KEC['str95']"> м<sup>3</sup>.
+          <br>
+          "К/з":обнаружено <input class="input-small" type="text" [(ngModel)]="_KEC['KZ1']">; устранено <input class="input-small" type="text" [(ngModel)]="_KEC['KZ2']">; осталось <input class="input-small" type="text" [(ngModel)]="_KEC['KZ3']">.
+          <br>
+          Примечания мастера:<input  class="input-long-1" type="text" [(ngModel)]="_KEC['masterNode1']" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" type="text" [(ngModel)]="_KEC['aminNode1']" >
+        </mat-card-content>
+        <mat-card-subtitle class="subtitle-default">Плавильное отд.:</mat-card-subtitle>
+        <mat-card-content class="card">
+          <b>наплавлено</b> см.№3 (сутки):<input class="input-midle" type="text" [(ngModel)]="_KEC['plavStr11']">(<input class="input-midle" type="text" [(ngModel)]="_KEC['plavStr12']">)т.;см.№1:<input class="input-midle" type="text" [(ngModel)]="_KEC['plavStr13']">т.
+          <br>
+          F801-<input class="input-midle-check" type="text"  [(ngModel)]="_KEC['F801']">>; F802-<input class="input-midle-check" type="text"  [(ngModel)]="_KEC['F802']">>;F803-<input class="input-midle-check" type="text"  [(ngModel)]="_KEC['F803']">>;F805-<input class="input-midle-check" type="text"  [(ngModel)]="_KEC['F805']">>.
+          <br>
+          распылительная:<input  class="input-long-1" type="text" [(ngModel)]="_KEC['plavStr21']" >.
+          <br>
+          Примечания мастера:<input  class="input-long-1" type="text" [(ngModel)]="_KEC['masterNote2']" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" type="text" [(ngModel)]="_KEC['aminNote2']" >
+        </mat-card-content>
+        <mat-card-subtitle class="subtitle-default">ГМО:</mat-card-subtitle>
+        <mat-card-content class="card">
+          поток <input class="input-midle" type="text" [(ngModel)]="_KEC['GMO11']"> м<sup>3</sup>/ч. По качеству BCC-6 <input class="input-midle" type="text" [(ngModel)]="_KEC['GMO12']">. Фильтрация на I/II стадии <input class="input-midle" type="text" [(ngModel)]="_KEC['GMO13']">/<input class="input-midle" type="text" [(ngModel)]="_KEC['GMO14']"> ф/п.
+        По качеству очистки <input class="input-midle" type="text" [(ngModel)]="_KEC['GMO21']">. В работе:<input class="input-midle" type="text" [(ngModel)]="_KEC['GMO22']">. TK702C/D <input class="input-midle" type="text" [(ngModel)]="_KEC['GMO23']">. Реактора в
+        работе: ТК501<input class="input-midle" type="text" [(ngModel)]="_KEC['GMO31']">, ТК502<input class="input-small" type="text" [(ngModel)]="_KEC['GMO32']">/<input class="input-small" type="text" [(ngModel)]="_KEC['GMO33']">/<input class="input-small" type="text" [(ngModel)]="_KEC['GMO34']">/<input class="input-small" type="text" [(ngModel)]="_KEC['GMO35']">(<input class="input-midle" type="text" [(ngModel)]="_KEC['GMO36']">). В работе Е501<input class="input-midle" type="text" [(ngModel)]="_KEC['GMO37']">. Гипс <input class="input-midle" type="text" [(ngModel)]="_KEC['GMO38']"> м<sup>3</sup>. Б/м <input class="input-midle" type="text" [(ngModel)]="_KEC['GMO39']">.
+      </mat-card-content>
+      <mat-card-subtitle class="subtitle-default">Cd отделение:</mat-card-subtitle>
+        <mat-card-content class="card">
+          нагрузка 9,6 (<input class="input-small" type="text" [(ngModel)]="_KEC['CD1']">-<input class="input-small" type="text" [(ngModel)]="_KEC['CD2']">-<input class="input-small" type="text" [(ngModel)]="_KEC['CD3']">) кА, <input class="input-midle" type="text" [(ngModel)]="_KEC['CD4']">.
+          <br>
+          Примечания мастера:<input  class="input-long-1" type="text" [(ngModel)]="_KEC['masterNote3']" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" type="text" [(ngModel)]="_KEC['adminNote3']" >
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+    <mat-tab  label="Обжиговый цех" >
+      <mat-card id="Obzig" class="mat-card-main">
+        <mat-card-content class="card">
+          <b>Загружено:</b> см. №3(сут):<input class="input-midle" type="text" [(ngModel)]="_obzhig['str11']">(<input class="input-midle" type="text" [(ngModel)]="_obzhig['str12']">т.); см. №1:<input class="input-midle" type="text" [(ngModel)]="_obzhig['str13']"> т.
+          <br>
+          В работе печи КС-<input class="input-midle" type="text" [(ngModel)]="_obzhig['str21']"> (через <input class="input-midle" type="text" [(ngModel)]="_obzhig['str22']">; КС-<input class="input-midle" type="text" [(ngModel)]="_obzhig['str23']"> на своем О<sub>2</sub>), КС-<input class="input-midle" type="text" [(ngModel)]="_obzhig['str24']"> на О<sub>2</sub> "Мечел").
+          Печи управляются <input class="input-midle" type="text" [(ngModel)]="_obzhig['str31']">, режимы <input class="input-midle" type="text" [(ngModel)]="_obzhig['str32']">. Сделали по две донные выгрузки,  огарок
+          нормальный. Шихта:<input class="input-midle" type="text" [(ngModel)]="_obzhig['str41']"> % <input class="input-midle" type="text" [(ngModel)]="_obzhig['str42']">, : <input class="input-midle" type="text" [(ngModel)]="_obzhig['str43']"> % <input class="input-midle" type="text" [(ngModel)]="_obzhig['str44']">, :<input class="input-midle" type="text" [(ngModel)]="_obzhig['str45']"> % <input class="input-midle" type="text" [(ngModel)]="_obzhig['str46']">, : <input class="input-midle" type="text" [(ngModel)]="_obzhig['str47']">%<input class="input-midle" type="text" [(ngModel)]="_obzhig['str48']">, : <input class="input-midle" type="text" [(ngModel)]="_obzhig['str49']">%
+          <input class="input-midle" type="text" [(ngModel)]="_obzhig['str51']">, <input class="input-midle" type="text" [(ngModel)]="_obzhig['str52']">% <input class="input-midle" type="text" [(ngModel)]="_obzhig['str53']">, +<input class="input-midle" type="text" [(ngModel)]="_obzhig['str54']">. На газоочистке в работе секции №<input class="input-midle" type="text" [(ngModel)]="_obzhig['str55']">. Разрежение в 
+          "чистом" коллекторе <input class="input-midle" type="text" [(ngModel)]="_obzhig['str61']"> &divide; <input class="input-midle" type="text" [(ngModel)]="_obzhig['str62']"> мм. Насосы исправны, циркуляция в норме (песков <input class="input-midle" type="text" [(ngModel)]="_obzhig['str63']">, пены <input class="input-midle" type="text" [(ngModel)]="_obzhig['str71']">/песков <input class="input-midle" type="text" [(ngModel)]="_obzhig['str72']">, пены <input class="input-midle" type="text" [(ngModel)]="_obzhig['str73']">). 
+          По складу <input class="input-midle" type="text" [(ngModel)]="_obzhig['str74']"> (<input class="input-midle" type="text" [(ngModel)]="_obzhig['str75']"> крановщика). Выгрузка: (см №3):
+          <input class="input-midle" type="text" [(ngModel)]="_obzhig['str81']">; (см №1):<input class="input-midle" type="text" [(ngModel)]="_obzhig['str82']">. 
+          <br>
+          Примечания мастера:<input title="nm" class="input-long-1" type="text" [(ngModel)]="_obzhig['masterNote']" >
+          <br>
+          Примечания диспетчера:<input  title="nd" class="input-long-1" type="text" [(ngModel)]="_obzhig['aminNote']" >
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+    <mat-tab  label="Выщелачивательный цех." >
+      <mat-card id="Sheloch" class="mat-card-main">
+        <mat-card-content class="card">
+          В работе <input class="input-small" type="text" [(ngModel)]="_sheloch['str11']"> нейтральных и <input class="input-small" type="text" [(ngModel)]="_sheloch['str12']"> кислых сгустителя. 
+          <br>
+          Реактора № <input class="input-small" type="text" [(ngModel)]="_sheloch['str21']">с CuCl пульпой (<input class="input-small" type="text" [(ngModel)]="_sheloch['str22']"> м<sup>3</sup>). Пример HP из ГМЦ <input class="input-midle" type="text" [(ngModel)]="_sheloch['str23']">. На
+          классификации в работе <input class="input-midle" type="text" [(ngModel)]="_sheloch['str31']"> нитка (песков <input class="input-midle" type="text" [(ngModel)]="_sheloch['str32']"> см, с классификатора <input class="input-midle" type="text" [(ngModel)]="_sheloch['str33']"> т., пенообразование <input class="input-midle" type="text" [(ngModel)]="_sheloch['str41']">).
+          Распылительная: <input class="input-midle" type="text" [(ngModel)]="_sheloch['str42']">. НЧ:<input class="input-midle" type="text" [(ngModel)]="_sheloch['str43']">.
+          <br>
+          <em>"CuCl"</em>: установка №1 <input class="input-midle" type="text" [(ngModel)]="_sheloch['str51']">, №2 <input class="input-midle" type="text" [(ngModel)]="_sheloch['str52']">, операции <input class="input-midle" type="text" [(ngModel)]="_sheloch['str53']">+<input class="input-midle" type="text" [(ngModel)]="_sheloch['str54']"> на р-рах ГМЦ (б/м <input class="input-midle" type="text" [(ngModel)]="_sheloch['str55']">).
+          <br>
+          <em>"Флотация"</em>: в работе: поток <input class="input-midle" type="text" [(ngModel)]="_sheloch['str61']"> м<sup>3</sup>/ч, НСС-<input class="input-midle" type="text" [(ngModel)]="_sheloch['str62']"> в <input class="input-midle" type="text" [(ngModel)]="_sheloch['str63']">.
+          <br>
+          <em>ОВВ</em>: провели циклов <input class="input-midle" type="text" [(ngModel)]="_sheloch['str71']">+<input class="input-midle" type="text" [(ngModel)]="_sheloch['str72']">; ВВ приняли <input class="input-midle" type="text" [(ngModel)]="_sheloch['str73']">т.
+          <br>
+          <em>"Карбонизация"</em>: ф/п №<input class="input-midle" type="text" [(ngModel)]="_sheloch['str81']"> в работе. Циклов <input class="input-midle" type="text" [(ngModel)]="_sheloch['str82']">+<input class="input-midle" type="text" [(ngModel)]="_sheloch['str83']">&rArr;<input class="input-midle" type="text" [(ngModel)]="_sheloch['str84']"> т. (~<input class="input-midle" type="text" [(ngModel)]="_sheloch['str85']">/<input class="input-midle" type="text" [(ngModel)]="_sheloch['str86']"> т/ц).
+          <br>
+          <em>Дозировка Fe окалины</em>:<input class="input-midle" type="text" [(ngModel)]="_sheloch['str91']">. <em>Ввод воды</em>:<input class="input-midle" type="text" [(ngModel)]="_sheloch['str92']">.
+          <br>
+          Примечания мастера:<input  class="input-long-1" type="text" [(ngModel)]="_sheloch['masterNote']" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" type="text" [(ngModel)]="_sheloch['adminNote']" >
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+    <mat-tab  label="Вельц-цех." >
+      <mat-card id="Velc" class="mat-card-main">
+        <mat-card-content class="card">
+          <b>Переработано /в т.ч. кек/в т.ч. ВЦС(вмт):<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str11']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str12']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str13']">.</b>
+          <br>
+          В/п №3(max произв. 60 вмт): Переработано:<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str21']"> т.(~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str22']">т/ч/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str23']">/)
+          <br>
+          В/п №4(max произв. 67 вмт): Переработано:<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str31']"> т.(~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str32']">т/ч/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str33']">/)
+          <br>
+          В/п 3/4:<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str41']"> т кек, <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str42']"> т промпродукты, <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str43']"> тК/окись, <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str44']"> т изгарь, <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str45']"> т долмит + 16% нефтекокс (окиси <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str46']"> т).
+          <b><em>РФГ</em></b>: текущую в/о <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str51']">, в/о сКВП №5,6 <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str52']">. <b><em>ПСО</em></b>:"В"~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str53']"> м;"З"~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str54']"> м. Подали <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str55']"> МКР
+          с текущими подкулерными возгонами в ВыщЦ(остаток <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str61']"> МКР).
+          <br>
+          <b><em>Прокалка №1</em></b>(max произв. 81 вмт): переработано:<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str71']">т.(~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str72']">т/ч,<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str73']">), в ГМЦ откачали <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str74']"> т.
+          <br>
+          <b><em>Прокалка №2</em></b>(max произв. 81 вмт): переработано:<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str81']">т.(~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str82']">т/ч,<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str83']">), в ГМЦ откачали <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str84']"> т.
+          <br>
+          Переработали окиси Проминдустрия/ПСЦМ/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str91']">:<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str92']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str93']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str94']"> т.; с н.м.<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str95']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str96']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str97']">т.
+          <br>
+          <b>УПРиГР</b>: прошихтовали <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str101']"> т. (<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str101']"> цикла), по заданию. 
+          <br>
+          <em><b>"Larox"</b></em>: в работе <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str111']"> п/ф, циклов <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str112']">(<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str113']">+<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str114']">)&rArr;<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str115']">т. (план - не менее 4,0 т/ц /факт ~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str116']">т/ц).
+          <br>
+          Простой:<input  class="input-long-1" type="text" [(ngModel)]="_velcCeh['prostoy']" >
+          <br>
+          Примечания мастера:<input  class="input-long-1" type="text" [(ngModel)]="_velcCeh['masterNote']" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" type="text" [(ngModel)]="_velcCeh['adminNote']" >
+          <br>
+          <b><em>КВП-5/6:</em></b> (УР <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str121']">, БГ <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str122']">): прошихтовали: <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str123']"> т. кека, в т.ч. <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str124']"> т. из запаса; <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str125']"> т. К/окиси
+          (<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str131']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str132']">),<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str133']"> т. Святогор (<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str134']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str135']">), <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str136']"> т. изгарь (<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str137']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str138']">), <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str139']"> т. <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str1310']">(<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str1311']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str1312']">), <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str1313']">т. доломит (<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str1314']">/<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str1315']">).
+          <br>
+          <b><em>КВП-5:</em></b> (план <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str141']">): переработано <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str142']"> т. (~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str143']"> т/ч по шихте, <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str144']">). Получено окиси <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str145']">т.
+          Примечания:<input  class="input-long-1" type="text" [(ngModel)]="_velcCeh['str151']" >. Оборот с бункеров <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str152']">(окатали<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str153']">т.)
+          <br>
+          <b><em>КВП-6:</em></b> (план <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str161']">): переработано <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str162']"> т. (~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str163']"> т/ч по шихте, /<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str164']">/, материал<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str171']">). Получено окиси <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str172']"> т. Примечания:<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str173']">.
+          Оборот с бункеров <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str181']">&divide;<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str182']"> на Eirich(окатали <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str183']"> т.). КВП-6(Eirich): циклов <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str21']">(<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str22']">+<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str186']">)&rArr;<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str187']">т. (в 
+          т.ч. Zn-содержащего сырья <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str191']"> т. W=<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str192']">%). Окатали <input class="input-midle" type="text" [(ngModel)]="_velcCeh['str193']">%-переработка шихты из СШ.
+          Клинкера к отгрузке (смт): в/ц~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str201']"> п/в (~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str202']">); КВП-5/6:~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str203']"> п/в(~<input class="input-midle" type="text" [(ngModel)]="_velcCeh['str204']">).
+          <br>
+          Примечания мастера:<input  class="input-long-1" type="text" [(ngModel)]="_velcCeh['masterNote1']" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" type="text" [(ngModel)]="_velcCeh['adminNote1']" >
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+    <mat-tab  label="ГМЦ." >
+      <mat-card id="GMC" class="mat-card-main">
+        <mat-card-content class="card">
+          <b>Загрузили:<input class="input-midle" type="text" [(ngModel)]="_gmc['str11']"> м<sup>3</sup>; откачали: <input class="input-midle" type="text" [(ngModel)]="_gmc['str12']"> м<sup>3</sup></b>.(<input class="input-midle" type="text" [(ngModel)]="_gmc['str13']">).
+          <br>
+          Принято непрок. в/о <input class="input-midle" type="text" [(ngModel)]="_gmc['str21']"> т.<b><em>СПО:</em></b> прогнали <input class="input-midle" type="text" [(ngModel)]="_gmc['str22']"> т., остаток <input class="input-midle" type="text" [(ngModel)]="_gmc['str23']"> т.; песков <input class="input-midle" type="text" [(ngModel)]="_gmc['str24']"> т.
+          <br>
+          Установки <input class="input-midle" type="text" [(ngModel)]="_gmc['str31']">(б/м<input class="input-midle" type="text" [(ngModel)]="_gmc['str32']">). PbAg дросс, кг:<input class="input-midle" type="text" [(ngModel)]="_gmc['str33']">; с н.м. <input class="input-midle" type="text" [(ngModel)]="_gmc['str34']">.
+          <br>
+          В работе КС-<input class="input-midle" type="text" [(ngModel)]="_gmc['str41']">(<input class="input-midle" type="text" [(ngModel)]="_gmc['str42']">) и <input class="input-midle" type="text" [(ngModel)]="_gmc['str43']"> Mn мельницы (<input class="input-midle" type="text" [(ngModel)]="_gmc['str44']">). <b><em>РМО:</em></b> поток <input class="input-midle" type="text" [(ngModel)]="_gmc['str45']">м<sup>3</sup>/ч. H<sub>2</sub>SO<sub>4</sub>~<input class="input-midle" type="text" [(ngModel)]="_gmc['str46']">т.
+          <br>
+          <b><em>"Larox"</em></b> (<input class="input-midle" type="text" [(ngModel)]="_gmc['str51']">): циклов <input class="input-midle" type="text" [(ngModel)]="_gmc['str52']">&rArr;<input class="input-midle" type="text" [(ngModel)]="_gmc['str53']">т.(~<input class="input-midle" type="text" [(ngModel)]="_gmc['str54']">т/ц).<b><em>"FB-1200"</em></b>(<input class="input-midle" type="text" [(ngModel)]="_gmc['str55']">): циклов <input class="input-midle" type="text" [(ngModel)]="_gmc['str56']"> &rArr; <input class="input-midle" type="text" [(ngModel)]="_gmc['str57']">т. (~<input class="input-midle" type="text" [(ngModel)]="_gmc['str58']">т/ц).
+          <br>
+          <b><em>"MC-100" №1</em></b>  циклов <input class="input-midle" type="text" [(ngModel)]="_gmc['str61']">&rArr;<input class="input-midle" type="text" [(ngModel)]="_gmc['str62']">т.(~<input class="input-midle" type="text" [(ngModel)]="_gmc['str63']">т/ц).<b><em>"MC-100"</em></b> №2 циклов <input class="input-midle" type="text" [(ngModel)]="_gmc['str64']"> &rArr; <input class="input-midle" type="text" [(ngModel)]="_gmc['str65']"> т.(~<input class="input-midle" type="text" [(ngModel)]="_gmc['str66']">т/ц).
+          <br>
+          <b><em>"Diefenbach": №14.1</em></b>  (<input class="input-midle" type="text" [(ngModel)]="_gmc['str71']">):<input class="input-midle" type="text" [(ngModel)]="_gmc['str72']">&rArr<input class="input-midle" type="text" [(ngModel)]="_gmc['str73']">т. (~<input class="input-midle" type="text" [(ngModel)]="_gmc['str74']">т/ц); <b>№14.2</b>(<input class="input-midle" type="text" [(ngModel)]="_gmc['str75']">):<input class="input-midle" type="text" [(ngModel)]="_gmc['str76']">&rArr;<input class="input-midle" type="text" [(ngModel)]="_gmc['str77']">т.(~<input class="input-midle" type="text" [(ngModel)]="_gmc['str78']"> т/ц).
+          <br>
+          Примечания мастера:<input  class="input-long-1" type="text" [(ngModel)]="_gmc['masterNote']" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" type="text" [(ngModel)]="_gmc['aminNote']" >
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+    <mat-tab  label="СКЦ." >
+      <mat-card id="SKC" class="mat-card-main">
+        <mat-card-content class="card">
+          <b>Получено кислоты:<input class="input-midle" type="text" [(ngModel)]="_skc['str1']">т.</b>
+          <br>
+          Газовая нагрузка <input class="input-midle" type="text" [(ngModel)]="_skc['str11']">(<input class="input-midle" type="text" [(ngModel)]="_skc['str12']">-<input class="input-midle" type="text" [(ngModel)]="_skc['str13']">-<input class="input-midle" type="text" [(ngModel)]="_skc['str14']">) <b>тыс. м<sup>3</sup>/ч</b>. Газ:<input class="input-midle" type="text" [(ngModel)]="_skc['str15']">-<input class="input-midle" type="text" [(ngModel)]="_skc['str16']">-<input class="input-midle" type="text" [(ngModel)]="_skc['str17']">%. К/а работают в режимах.
+          <br>
+          Свободный объем <input class="input-midle" type="text" [(ngModel)]="_skc['str21']"> т.(под II сорт <input class="input-midle" type="text" [(ngModel)]="_skc['str22']">).
+          <br>
+          Примечания мастера:<input  class="input-long-1" type="text" [(ngModel)]="_skc['masterNote']" >
+          <br>
+          Примечания диспетчера:<input  class="input-long-1" type="text" [(ngModel)]="_skc['aminNote']" >
+          <br>
+          УОС в норме.
+          <br>
+          ЭНЦ: ВКУ: в работе <input class="input-midle" type="text" [(ngModel)]="_skc['str31']"> аппаратов(конд.~<input class="input-midle" type="text" [(ngModel)]="_skc['str32']"> м<sup>3</sup>/ч); Котельная: в работе котел №<input class="input-midle" type="text" [(ngModel)]="_skc['str33']">(<input class="input-midle" type="text" [(ngModel)]="_skc['str34']"> м<sup>3</sup>/ч).
+          <br>
+          КС: в работе блоки №<input class="input-midle" type="text" [(ngModel)]="_skc['str41']">(<input class="input-midle" type="text" [(ngModel)]="_skc['str42']">/<input class="input-midle" type="text" [(ngModel)]="_skc['str43']">/<input class="input-midle" type="text" [(ngModel)]="_skc['str44']">%:<input class="input-midle" type="text" [(ngModel)]="_skc['str45']">/<input class="input-midle" type="text" [(ngModel)]="_skc['str46']">/<input class="input-midle" type="text" [(ngModel)]="_skc['str47']"> нм<sup>3</sup>/ч),<input class="input-midle" type="text" [(ngModel)]="_skc['str48']">.
+          <br>
+          Объем растворов по заводу:<input class="input-midle" type="text" [(ngModel)]="_skc['str51']"> м<sup>3</sup>(<input class="input-midle" type="text" [(ngModel)]="_skc['str52']">).
+          <br>
+          НМУ-1 <input  class="input-long-1" type="text" [(ngModel)]="_skc['str6']" >
+          <br>
+          <p id="pasAc">Смену сдал:<input class="input-midle" type="text" [(ngModel)]="_skc['in']"> Смену принял:<input class="input-midle" type="text" [(ngModel)]="_skc['out']"></p>
+        </mat-card-content>
+      </mat-card>
+    </mat-tab>
+  </mat-tab-group>
