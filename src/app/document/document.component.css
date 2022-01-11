@@ -1,81 +1,8 @@
-.mat-card-main{
-    background-color: rgb(255, 255, 255);
-  }
-  .mat-tab-group{
-    background-color: rgb(255, 255, 255);
-  }
-
-  .mat-card-header{
-    width:80%;
-    margin-left:10%;
-    margin-right: 10%;
-  }
-  .subtitle-default{
-    font-size:12pt;
-    margin-left:10%;
-    margin-right: 10%;
-  }
-  .input-small{
-    background: rgba( 0,0,0,0);
-    border: none;
-    font-size:12pt;
-    width: 2em;
-    outline: none;
-  }
-  .input-long-2{
-    background: rgba( 0,0,0,0);
-    border: none;
-    font-size:12pt;
-    width: 40vw;
-    outline: none;
-  }
-  .input-midle{
-    background: rgba( 0,0,0,0);
-    border: none;
-    font-size:12pt;
-    width: 3em;
-    outline: none;
-  }
-  .input-long-1{
-    background: rgba(0, 0, 0, 0);
-    border: none;
-    font-size:12pt;
-    width: 50vw;
-    outline: none;
-    
-  }
-  .input-midle-check{
-    background: rgba( 0,0,0,0);
-    border: none;
-    font-size:12pt;
-    
-    width: 10vw;
-    outline: none;
-  }
-  .card-li{
-    font-size:12pt;
-    display: inline;
-  }
-  .card{
-    font-size:12pt;
-  }
-  #gruz{
-    font-size:12pt; 
-  }
-  .pasAc{
-    text-align: right;
-  }
-  #select-1{
-    background: rgba( 0,0,0,0.1);
-    border: none;
-    border-bottom: 1px solid rgb(3, 3, 3);
-    font-size:12pt;
-    width: 10vw;
-    outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  }
-  .select-midle1{
-    width: 10vw;
-
-  }
+#gruzhead{
+  float: left;
+  width: 15%;
+}
+#gruzhead{
+  float: left;
+  width: 85%;
+}

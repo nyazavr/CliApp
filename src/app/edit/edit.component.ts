@@ -1,4 +1,3 @@
-
 import { Component, OnInit ,EventEmitter, Output, Input, TemplateRef, ContentChild, HostBinding, HostListener} from '@angular/core';
 
 import {Buffer} from '../model/buffer';
@@ -27,6 +26,7 @@ interface select{
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit {
+
   _skc:Parameter={
     
     "str1":"0",  
@@ -413,7 +413,7 @@ export class EditComponent implements OnInit {
     "adminNote3":"string",
   }
   _transp:Parameter={
-    "inputval":"stringaaa",
+    "inputval":"string",
     "inputsum":"string",
     "outputval":"string",
     "outputsum":"string",
@@ -480,7 +480,6 @@ export class EditComponent implements OnInit {
     "noteAdmin":"string",
   }
   
-  
   deposite: deposited={
     F801: 0,
     F802: 0,
@@ -495,7 +494,6 @@ export class EditComponent implements OnInit {
   sel: select={start:false, continue: true, end: false};
 
   title = 'edit';
-  
   
   @Input() buffer1: Buffer={
     htmlText: "document.documentElement.innerHTML",
@@ -559,7 +557,6 @@ export class EditComponent implements OnInit {
 
     this.buffer1Change.emit(this.buffer1);
     this.createdDoc.emit();
-    
   }
 
   checkSelect(option: string){

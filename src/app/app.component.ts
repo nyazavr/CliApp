@@ -519,14 +519,16 @@ export class AppComponent implements OnInit {
     let datenow=new Date();
     const datepipe: DatePipe = new DatePipe('en-ru')
     let formattedDate = datepipe.transform(datenow, 'dd-MM-YYYY HH:mm:ss')
-    for(var i=0;i<54;i++){
-      this.f.push({
-        name: "",
-        date: formattedDate as string, 
-        idDisp: 181+i,
-        formId:1,
-        value: (this.buffer._transport as Parameter)[181+i] as string}) 
-    }
+    Object.keys(this.buffer._transport as Parameter)
+      .forEach(e=>{
+        this.f.push({
+          name: e,
+          date: formattedDate as string,
+          formId:1,
+          value: (this.buffer._transport as Parameter)[e] as string}
+        ) 
+      }
+      )
     this.FS.createBuffer(this.f).subscribe();
   }
 
@@ -546,10 +548,7 @@ export class AppComponent implements OnInit {
   ngOnInit(){
     this.getBuffer();
     let trsp=this.forms.filter(e=>e.formId==1);
-    
-    for(var i=0;i<54;i++){
-     (this.buffer._transport as Parameter)[181+i]=(trsp.find(e=>e.idDisp==1)?.value as string);
-    }
+    trsp.forEach(e=>(this.buffer._transport as Parameter)[e.name]=e.value);
     /*Object.keys(this.buffer._transport?this.buffer._transport:[])
     .forEach(e=> trsp
       .forEach(t=> e==t.name?this.buffer._transport?this.buffer._transport[e as keyof transport]=t.value:"null":"null")

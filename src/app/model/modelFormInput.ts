@@ -12,7 +12,7 @@ export interface Parameter{
 }
 
 export interface DispLog{
-    idDisp:number; 
+    //idDisp:number; 
     name:string; 
     date:string;
     value:string; 

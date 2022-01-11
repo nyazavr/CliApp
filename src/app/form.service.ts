@@ -7,7 +7,7 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import {DispLog} from './model/modelFormInput';
+import { DispLog } from './model/modelFormInput';
 //import {nedodb} from './nedodb';
 
 @Injectable({
