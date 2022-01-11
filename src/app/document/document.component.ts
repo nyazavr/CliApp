@@ -517,7 +517,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit(){
-    
+    this.createDoc()
     //(document.querySelector("#"+"doc") as HTMLInputElement).textContent="груженые на р/д";
     //this.appp = 
     //this.appp.textContent="груженые на р/д";// this.buffer2.htmlText;

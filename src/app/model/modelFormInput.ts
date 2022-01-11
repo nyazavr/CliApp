@@ -2,10 +2,9 @@ import { Type } from "@angular/core";
 import {transport} from "./transport"
 
 
-export interface ParameterVal{
-    value:string
-    id:string
-}
+/*export interface ParameterVal{
+    [index:number]:string;
+}*/
 
 export interface Parameter{
     [index:string]:string;
