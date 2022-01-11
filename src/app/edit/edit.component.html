@@ -5,50 +5,50 @@
       <mat-card id="Transport" class="mat-card-main">
         <mat-card-content class="card">
           За смену поступило: 
-            <input id="inp1"  class="input-long-2" [(ngModel)]="_transp[181]" type="text">
-            &sum;. <input id="inp2" [(ngModel)]="_transp[182]"  class="input-midle" type="text"> ед.
+            <input id="inp1"  class="input-long-2" [(ngModel)]="_transp['inputval']" type="text">
+            &sum;. <input id="inp2" [(ngModel)]="_transp['inputsum']"  class="input-midle" type="text"> ед.
           <br>
           За смену отгружено: 
-            <input  class="input-long-2" [(ngModel)]="183]" type="text" >
-            &sum;. <input class="input-midle" [(ngModel)]="_transp[184]" type="text" > ед.
+            <input  class="input-long-2" [(ngModel)]="_transp['outputval']" type="text" >
+            &sum;. <input class="input-midle" [(ngModel)]="_transp['outputsum']" type="text" > ед.
           <br>
           За смену МП: 
-            <input  class="input-long-1" [(ngModel)]="_transp[185]" type="text" >
+            <input  class="input-long-1" [(ngModel)]="_transp['MP']" type="text" >
           <br>
           <mat-card class="mat-card-main">
             <mat-card-header>
-              груженые на р/д <input class="input-midle" [(ngModel)]="_transp[186]"  type="text" > ед. COK,<input class="input-midle" type="text" [(ngModel)]="_transp[187]"  > ед. ППФ, <input class="input-midle" [(ngModel)]="_transp[188]" type="text" > ед. дросс.
+              груженые на р/д <input class="input-midle" [(ngModel)]="_transp['COK']"  type="text" > ед. COK,<input class="input-midle" type="text" [(ngModel)]="_transp['PPF']"  > ед. ППФ, <input class="input-midle" [(ngModel)]="_transp['dros']" type="text" > ед. дросс.
             </mat-card-header>
           <mat-card-subtitle id="gruz" >Грузы:</mat-card-subtitle>
           <mat-card-content class="cargo">
             <mat-card-content class="card-li">
-              <input class="input-midle" type="text" [(ngModel)]="_transp[189]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[180]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[181]"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp[182]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[1813]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[21]"  >);
+              <input class="input-midle" type="text" [(ngModel)]="_transp['str11']"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp['str12']"  >(<input class="input-midle" type="text" [(ngModel)]="_transp['str13']"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp['str14']"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp['str15']"  >(<input class="input-midle" type="text" [(ngModel)]="_transp['str16']">);
               <br>
-              <input class="input-midle" type="text" [(ngModel)]="_transp[22]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[186]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[187]"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp[188]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[189]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[190]"  >)
+              <input class="input-midle" type="text" [(ngModel)]="_transp['str21']"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp['str22']"  >(<input class="input-midle" type="text" [(ngModel)]="_transp['str23']"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp['str24']"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp['str25']"  >(<input class="input-midle" type="text" [(ngModel)]="_transp['str26']">);
               <br>
-              <input class="input-midle" type="text" [(ngModel)]="_transp[191]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[192]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[193]"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp[194]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[195]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[196]"  >);
+              <input class="input-midle" type="text" [(ngModel)]="_transp['str31']"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp['str32']"  >(<input class="input-midle" type="text" [(ngModel)]="_transp['str33']"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp['str34']"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp['str35']"  >(<input class="input-midle" type="text" [(ngModel)]="_transp['str36']">);
               <br>
-              <input class="input-midle" type="text" [(ngModel)]="_transp[197]"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp[198]"  >(<input class="input-midle" type="text" [(ngModel)]="_transp[199]"  >);  <input class="input-midle" type="text" [(ngModel)]="200]"  >П/в<input class="input-midle" type="text" [(ngModel)]="201]"  >(<input class="input-midle" type="text" [(ngModel)]="202]"  >);
+              <input class="input-midle" type="text" [(ngModel)]="_transp['str41']"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp['str42']"  >(<input class="input-midle" type="text" [(ngModel)]="_transp['str43']"  >);  <input class="input-midle" type="text" [(ngModel)]="_transp['str44']"  >П/в<input class="input-midle" type="text" [(ngModel)]="_transp['str45']"  >(<input class="input-midle" type="text" [(ngModel)]="_transp['str46']">);
             </mat-card-content>
             <mat-card-content >
-              <p id="pasAc">&sum;.<input class="input-midle" type="text" [(ngModel)]="203]"  > ед.</p>
+              <p id="pasAc">&sum;.<input class="input-midle" type="text" [(ngModel)]="_transp['sum']"  > ед.</p>
             </mat-card-content>
           </mat-card-content>
           </mat-card>
           <br>
-          <em>Всего подвижного состава:</em><input class="input-midle" [(ngModel)]="204]" type="text" > ед.(<input class="input-midle" [(ngModel)]="205]" type="text" > в,<input class="input-midle" type="text" [(ngModel)]="206]"  > п/в, <input class="input-midle" [(ngModel)]="207]" type="text" > ц, <input class="input-midle" [(ngModel)]="208]" type="text" > пл.).
+          <em>Всего подвижного состава:</em><input class="input-midle" [(ngModel)]="_transp['podvSostEd']" type="text" > ед.(<input class="input-midle" [(ngModel)]="_transp['podvSostv']" type="text" > в,<input class="input-midle" type="text" [(ngModel)]="_transp['podvSostPv']"  > п/в, <input class="input-midle" [(ngModel)]="_transp['podvSostCe']" type="text" > ц, <input class="input-midle" [(ngModel)]="_transp['podvSostPl']" type="text" > пл.).
           <br>
-          Под Zn вагонов:<input class="input-midle" [(ngModel)]="209]" type="text" > + груженые:<input  class="input-long-2" [(ngModel)]="_transp[210]" type="text" >
+          Под Zn вагонов:<input class="input-midle" [(ngModel)]="_transp['podZn']" type="text" > + груженые:<input  class="input-long-2" [(ngModel)]="_transp['podZn1']" type="text" >
           <br>
-          Под погрузку п/в:<input class="input-midle" [(ngModel)]="_transp[211]" type="text" > + груженые:<input  class="input-long-2" [(ngModel)]="_transp[212]" type="text" >
+          Под погрузку п/в:<input class="input-midle" [(ngModel)]="_transp['podPogr']" type="text" > + груженые:<input  class="input-long-2" [(ngModel)]="_transp['podPogr1']" type="text" >
           <br>
-          Под H<sub>2</sub>SO<sub>4</sub>:<input class="input-midle" [(ngModel)]="_transp[213]" type="text" > ц+<input class="input-midle" [(ngModel)]="_transp[214]" type="text"> пл.т/к + налив:<input class="input-midle" [(ngModel)]="_transp[215]" type="text" > ц+ <input class="input-midle" type="text" [(ngModel)]="_transp[216]">пл т/к + налитые:<input class="input-midle" type="text" [(ngModel)]="_transp[217]">ц.(II сорт).
+          Под H<sub>2</sub>SO<sub>4</sub>:<input class="input-midle" [(ngModel)]="_transp['podH2SO4']" type="text" > ц+<input class="input-midle" [(ngModel)]="_transp['podH2SO41']" type="text"> пл.т/к + налив:<input class="input-midle" [(ngModel)]="_transp['podH2SO42']" type="text" > ц+ <input class="input-midle" type="text" [(ngModel)]="_transp['podH2SO43']">пл т/к + налитые:<input class="input-midle" type="text" [(ngModel)]="_transp['podH2SO44']">ц.(II сорт).
           <br>
-          Подход:<input class="input-midle" [(ngModel)]="_transp[218]" type="text"> ед. на ст."Электростанция (в т.ч.<input class="input-midle" [(ngModel)]="_transp[219]" type="text"> ц + <input class="input-midle" [(ngModel)]="_transp[220]" type="text"> пл. т/к)". Сумм.<input class="input-midle" [(ngModel)]="_transp[221]" type="text"> ед.
+          Подход:<input class="input-midle" [(ngModel)]="_transp['podhod']" type="text"> ед. на ст."Электростанция (в т.ч.<input class="input-midle" [(ngModel)]="_transp['podhod1']" type="text"> ц + <input class="input-midle" [(ngModel)]="_transp['podhod2']" type="text"> пл. т/к)". Сумм.<input class="input-midle" [(ngModel)]="_transp['podhodsum']" type="text"> ед.
           <br>
-          Примечания мастера:<input  class="input-long-1" [(ngModel)]="_transp[222]" type="text" >
+          Примечания мастера:<input  class="input-long-1" [(ngModel)]="_transp['noteMaster']" type="text" >
           <br>
-          Примечания диспетчера:<input  class="input-long-1" [(ngModel)]="_transp[223]" type="text" >
+          Примечания диспетчера:<input  class="input-long-1" [(ngModel)]="_transp['noteAdmin']" type="text" >
         </mat-card-content>
       </mat-card>
     </mat-tab>

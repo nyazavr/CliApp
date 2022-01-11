@@ -2,7 +2,7 @@
 import { Component, OnInit, Output,EventEmitter, Input,ViewContainerRef,ElementRef,ComponentFactoryResolver,Injector, AfterViewInit, ViewChild,Renderer2} from '@angular/core';
 import {Buffer} from '../model/buffer';
 
-import {DispLog} from '../model/modelFormInput';
+import {DispLog,Parameter} from '../model/modelFormInput';
 import { transport } from '../model/transport';
 import { SKC } from '../model/skc';
 import { obzig } from '../model/obzhig';
@@ -27,13 +27,12 @@ export class DocumentComponent implements OnInit, AfterViewInit {
   }
 
   @ViewChild("#doc") reader!: ElementRef;
-  @Input() forms: DispLog[]=[];
   @Input() buffer2: Buffer={
     htmlText:"adsdfsfo",
     formType:""}
   @Output() buffer2Change = new EventEmitter<Buffer>();
 
-  _skc:SKC={
+  _skc:Parameter={
     
     "str1":"0",  
     "str11":"0",
@@ -72,7 +71,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
     "in":"string",
     "out":"string",
   }
-  _gmc:GMC={
+  _gmc:Parameter={
     "str11":"0",
     "str12":"0",
     "str13":"string",
@@ -122,7 +121,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
     "masterNote":"string",
     "aminNote":"string",
 }
-  _velcCeh:velcCeh={
+  _velcCeh:Parameter={
     "str11":"0",
     "str12":"0",
     "str13":"0",
@@ -242,7 +241,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
     "masterNote1":"string",
     "adminNote1":"string",
   }
-  _sheloch:sheloch={
+  _sheloch:Parameter={
     "str11":"0",
 "str12":"0",
 
@@ -285,7 +284,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
 "masterNote":"string",
 "adminNote":"string",
   }
-  _obzhig:obzig={
+  _obzhig:Parameter={
     "str11":"0",
 "str12":"0",
 "str13":"0",
@@ -330,7 +329,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
 "masterNote":"string",
 "aminNote":"string",
 }
-  _KEC:KEC={
+  _KEC:Parameter={
     "str11":"number",
     "str12":"number",
     "str13":"number",
@@ -418,7 +417,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
     "masterNote3":"string",
     "adminNote3":"string",
   }
-  _transp: transport={
+  _transp:Parameter={
     "transport":"string",
     "inputval":"string",
     "inputsum":"0",
@@ -487,9 +486,7 @@ export class DocumentComponent implements OnInit, AfterViewInit {
     "noteMaster":"string",
     "noteAdmin":"string",
   }
-  app!: HTMLElement;
-  appp!:  HTMLInputElement;
-  //b=this.renderer.//.querySelector("#TransportDoc");
+
   createDoc(){
     if(this.buffer2._transport){
       this._transp=this.buffer2._transport;
@@ -512,11 +509,6 @@ export class DocumentComponent implements OnInit, AfterViewInit {
     if(this.buffer2._SKC){
       this._skc=this.buffer2._SKC;
     }
-    /*let el=this.renderer.createElement("div")
-    let text=this.renderer.createText("sdafdsf")
-    //el.innerHTML=this.buffer2.htmlText;
-    this.renderer.appendChild(el,text);
-    this.renderer.appendChild(this.reader.nativeElement,el);*/
     
   }
 

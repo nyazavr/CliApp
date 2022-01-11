@@ -4,15 +4,8 @@ import { Component, OnInit ,EventEmitter, Output, Input, TemplateRef, ContentChi
 import {Buffer} from '../model/buffer';
 import {FormControl} from '@angular/forms';
 
-import {DispLog,Parameter, Parameterid} from '../model/modelFormInput';
+import {DispLog,Parameter} from '../model/modelFormInput';
 import {FormService} from "../form.service";
-/*import { transport } from '../model/transport';
-import { SKC } from '../model/skc';
-import { obzig } from '../model/obzhig';
-import { GMC } from '../model/GMC';
-import { KEC } from '../model/KEC';
-import { velcCeh } from '../model/velcCeh';
-import { sheloch } from '../model/sheloch';*/
 
 interface deposited{
   F801: number,
@@ -419,7 +412,72 @@ export class EditComponent implements OnInit {
     "masterNote3":"string",
     "adminNote3":"string",
   }
-  _transp:Parameterid={
+  _transp:Parameter={
+    "inputval":"stringaaa",
+    "inputsum":"string",
+    "outputval":"string",
+    "outputsum":"string",
+    "MP":"string",
+
+    "str11":"string",
+    "str12":"string",
+    "str13":"string",
+    "str14":"string",
+    "str15":"string",
+    "str16":"string",
+
+    "str21":"string",
+    "str22":"string",
+    "str23":"string",
+    "str24":"string",
+    "str25":"string",
+    "str26":"string",
+
+    "str31":"string",
+    "str32":"string",
+    "str33":"string",
+    "str34":"string",
+    "str35":"string",
+    "str36":"string",
+
+    "str41":"string",
+    "str42":"string",
+    "str43":"string",
+    "str44":"string",
+    "str45":"string",
+    "str46":"string",
+
+    "sum":"string",
+
+    "COK":"string",
+    "PPF":"string",
+    "dros":"string",
+
+    "podvSostEd":"string",
+    "podvSostv":"string",
+    "podvSostPv":"string",
+    "podvSostCe":"string",
+    "podvSostPl":"string",
+
+    "podZn":"string",
+    "podZn1":"string",
+
+    "podPogr":"string",
+    "podPogr1":"string",
+
+    "podH2SO4":"string",
+    "podH2SO41":"string",
+    "podH2SO42":"string",
+    "podH2SO43":"string",
+    "podH2SO44":"string",
+
+    "podhod":"string",
+    "podhod1":"string",
+    "podhod2":"string",
+    "podhodsum":"string",
+
+    "noteMaster":"string",
+    "noteAdmin":"string",
   }
   
   
@@ -432,15 +490,10 @@ export class EditComponent implements OnInit {
   
   selectedProc:string|undefined;// начали закончили продолжили
   selecteTab: string="Transport";// текущаяя форма
-  options: string[] = ['Начали', 'Продолжили', 'Закончили'];
   public selected = new FormControl(0);
 
-  
-
   sel: select={start:false, continue: true, end: false};
-  masterNote="zx";
-  AdminNote="zx";
-  
+
   title = 'edit';
   
   
@@ -449,22 +502,16 @@ export class EditComponent implements OnInit {
     formType: ""
   }
   @Input() forms!: DispLog[];
-  //@Input() 
   
   @Output() buffer1Change = new EventEmitter<Buffer>();
-  //@Output() formTextChange = new EventEmitter<transport>();
   @Output() createdDoc = new EventEmitter<Buffer>();
   @Output() postDoc = new EventEmitter<Buffer>();
 
   constructor(){}
 
-
-
   onKey(event:Event){
     document.getElementById((event.target as HTMLInputElement).id)?.setAttribute("value",(event.target as HTMLInputElement).value);
   }
-
-  
 
   save(){
     switch(this.selected.value) { 
@@ -510,19 +557,9 @@ export class EditComponent implements OnInit {
     this.buffer1.htmlText+= tabEl?.innerHTML;
     this.buffer1.formType=this.selecteTab;
 
-    
     this.buffer1Change.emit(this.buffer1);
     this.createdDoc.emit();
     
-  }
-  
-  hundredPercent(){
-    if((this.deposite.F801+this.deposite.F801+this.deposite.F801+this.deposite.F801)===100){
-      (document?.querySelector('.input-midle-check') as HTMLInputElement).style.background="rgba(0, 0, 0, 0.1)";
-    }else{
-      (document?.querySelector('.input-midle-check') as HTMLInputElement).style.background="rgba(255, 0, 0, 0.1)";
-     
-    }
   }
 
   checkSelect(option: string){
@@ -542,24 +579,15 @@ export class EditComponent implements OnInit {
     }
   }
 
-  
-
   ngOnInit(){
-  for(var i=0;i<54;i++){
-    this._transp[181+i]="";  
-  }
-  this._skc!=this.buffer1._SKC;
-  this._gmc!=this.buffer1._GMC;
-  this._velcCeh!=this.buffer1._velcceh;
-  this._sheloch!=this.buffer1._sheloch;
-  this._obzhig!=this.buffer1._Obzhig;
-  this._KEC!=this.buffer1._KEC;
-  //this._transp!=this.buffer1._transport;
-  
+    this._transp= (this.buffer1._transport as Parameter)
+    this._skc=(this.buffer1._SKC as Parameter);
+    this._gmc=(this.buffer1._GMC as Parameter);
+    this._velcCeh=(this.buffer1._velcceh as Parameter);
+    this._sheloch=(this.buffer1._sheloch as Parameter);
+    this._obzhig=(this.buffer1._Obzhig as Parameter);
+    this._KEC=(this.buffer1._KEC as Parameter);
     this.selectedProc="Продолжили";
     this.sel={start:false, continue: true, end: false};
-    this.masterNote="zx";
-    this.AdminNote="zx";
-    
   }
 }

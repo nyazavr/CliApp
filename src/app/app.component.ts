@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit, ViewChild} from '@angular/core';
 import {DocumentComponent} from './document/document.component';
 import {Buffer} from './model/buffer';
 import {FormService} from "./form.service";
-import {DispLog, Parameterid} from './model/modelFormInput';
+import {DispLog,Parameter} from './model/modelFormInput';
 import { DatePipe } from '@angular/common';
 import * as internal from 'stream';
 
@@ -419,12 +419,76 @@ export class AppComponent implements OnInit {
       "adminNote3":"string",
     },
     _transport:{
+      "inputval":"stringaaa",
+      "inputsum":"string",
+      "outputval":"string",
+      "outputsum":"string",
+      "MP":"string",
+
+      "str11":"string",
+      "str12":"string",
+      "str13":"string",
+      "str14":"string",
+      "str15":"string",
+      "str16":"string",
+
+      "str21":"string",
+      "str22":"string",
+      "str23":"string",
+      "str24":"string",
+      "str25":"string",
+      "str26":"string",
+
+      "str31":"string",
+      "str32":"string",
+      "str33":"string",
+      "str34":"string",
+      "str35":"string",
+      "str36":"string",
+
+      "str41":"string",
+      "str42":"string",
+      "str43":"string",
+      "str44":"string",
+      "str45":"string",
+      "str46":"string",
+
+      "sum":"string",
+
+      "COK":"string",
+      "PPF":"string",
+      "dros":"string",
+
+      "podvSostEd":"string",
+      "podvSostv":"string",
+      "podvSostPv":"string",
+      "podvSostCe":"string",
+      "podvSostPl":"string",
+
+      "podZn":"string",
+      "podZn1":"string",
+
+      "podPogr":"string",
+      "podPogr1":"string",
+
+      "podH2SO4":"string",
+      "podH2SO41":"string",
+      "podH2SO42":"string",
+      "podH2SO43":"string",
+      "podH2SO44":"string",
+
+      "podhod":"string",
+      "podhod1":"string",
+      "podhod2":"string",
+      
+      "podhodsum":"string",
+
+      "noteMaster":"string",
+      "noteAdmin":"string",
     }  
   }
   sel: select={doc:false, edit: true};
-  //datenow: Date=new Date();
   
-  //message:string[]=[""];
   forms:DispLog[]=[]
   @ViewChild(DocumentComponent)
   documentComponent!: DocumentComponent;
@@ -432,15 +496,13 @@ export class AppComponent implements OnInit {
   getBuffer(){
     this.FS.getBuffer()
     .subscribe((form: DispLog[]) => this.forms = form);
-    //this.message.push("get ready")
+    Object.keys(this.buffer._transport as Parameter)
+    .forEach(el=>(this.buffer._transport as Parameter)[el as keyof Parameter]= (this.forms.find(e=>e.name==el)?.value as string));
+
   }
 
   createDocumentApp(){
-    /*let trsp=this.forms.filter(e=>e.formId==1);
-    Object.keys(this.buffer._transport as transport)
-    .forEach(e=> trsp
-      .forEach(t=> e==t.name?(this.buffer._transport as transport)[e as keyof transport]=t.value:"null")
-      )*/
+    
     this.documentComponent.createDoc();
   }
 
@@ -459,11 +521,11 @@ export class AppComponent implements OnInit {
     let formattedDate = datepipe.transform(datenow, 'dd-MM-YYYY HH:mm:ss')
     for(var i=0;i<54;i++){
       this.f.push({
-        //name: e,
+        name: "",
         date: formattedDate as string, 
         idDisp: 181+i,
         formId:1,
-        value: (this.buffer._transport as Parameterid)[181+i] as string}) 
+        value: (this.buffer._transport as Parameter)[181+i] as string}) 
     }
     this.FS.createBuffer(this.f).subscribe();
   }
@@ -486,7 +548,7 @@ export class AppComponent implements OnInit {
     let trsp=this.forms.filter(e=>e.formId==1);
     
     for(var i=0;i<54;i++){
-     (this.buffer._transport as Parameterid)[181+i]=(trsp.find(e=>e.idDisp==1)?.value as string);
+     (this.buffer._transport as Parameter)[181+i]=(trsp.find(e=>e.idDisp==1)?.value as string);
     }
     /*Object.keys(this.buffer._transport?this.buffer._transport:[])
     .forEach(e=> trsp
