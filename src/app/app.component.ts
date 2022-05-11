@@ -4,7 +4,6 @@ import {Buffer} from './model/buffer';
 import {FormService} from "./form.service";
 import {DispLog,Parameter} from './model/modelFormInput';
 import { DatePipe } from '@angular/common';
-import * as internal from 'stream';
 
 import { transport } from './model/transport';
 import { SKC } from './model/skc';
